@@ -24,12 +24,7 @@ contract EIP712Base is Initializable {
     // supposed to be called once while initializing.
     // one of the contracts that inherits this contract follows proxy pattern
     // so it is not possible to do this in a constructor
-    function _initializeEIP712(
-        string memory name
-    )
-        internal
-        initializer
-    {
+    function _initializeEIP712( string memory name ) internal initializer {
         _setDomainSeperator(name);
     }
 
@@ -64,11 +59,7 @@ contract EIP712Base is Initializable {
      * "\\x19" makes the encoding deterministic
      * "\\x01" is the version byte to make it compatible to EIP-191
      */
-    function toTypedMessageHash(bytes32 messageHash)
-        internal
-        view
-        returns (bytes32)
-    {
+    function toTypedMessageHash(bytes32 messageHash) internal view returns (bytes32) {
         return
             keccak256(
                 abi.encodePacked("\x19\x01", getDomainSeperator(), messageHash)

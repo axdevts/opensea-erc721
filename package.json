@@ -1,42 +1,56 @@
 {
-  "name": "opensea-creatures",
-  "version": "1.0.0",
-  "description": "OpenSea's smart contracts, including ERC721 templates, factories, and the storefront builder.",
-  "main": "index.js",
-  "scripts": {
-    "ganache-cli": "ganache-cli -d -p 7545 --gasLimit=10000000",
-    "test": "DEPLOY_ALL=1 truffle test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ProjectOpenSea/opensea-creatures.git"
-  },
-  "author": "support@opensea.io",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ProjectOpenSea/opensea-creatures/issues"
-  },
-  "homepage": "https://github.com/ProjectOpenSea/opensea-creatures#readme",
+  "name": "frontend_base_dapp",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "@0x/subproviders": "^6.4.1",
-    "eth-gas-reporter": "^0.2.17",
-    "eth-sig-util": "^3.0.1",
-    "ethereum-waffle": "^3.0.0",
-    "opensea-js": "^1.1.5",
-    "openzeppelin-solidity": "^4.3.1",
-    "truffle": "^5.1.30",
-    "truffle-assertions": "^0.9.2",
-    "truffle-contract-size": "^2.0.1",
-    "truffle-flattener": "^1.4.2",
-    "truffle-hdwallet-provider": "1.0.17",
-    "web3": "^1.0.0-beta.34"
+    "@openzeppelin/contracts": "^4.2.0",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "all": "^0.0.0",
+    "chai": "^4.3.4",
+    "chai-as-promised": "^7.1.1",
+    "dotenv": "^10.0.0",
+    "ipfs-http-client": "^52.0.0",
+    "react": "^17.0.2",
+    "react-canvas-draw": "^1.1.1",
+    "react-dom": "^17.0.2",
+    "react-redux": "^7.2.4",
+    "react-scripts": "4.0.3",
+    "react-signature-canvas": "^1.0.3",
+    "redux": "^4.1.1",
+    "redux-thunk": "^2.3.0",
+    "styled-components": "^5.3.0",
+    "truffle-hdwallet-provider": "^1.0.17",
+    "web-vitals": "^1.0.1",
+    "web3": "^1.5.1",
+    "web3-eth-contract": "^1.5.2"
   },
-  "engines": {
-    "node": "^12.18.x",
-    "yarn": "~1.22.4"
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
   "devDependencies": {
-    "eslint": "^7.22.0",
-    "truffle-plugin-verify": "^0.5.8"
+    "truffle-plugin-verify": "^0.5.14"
   }
 }

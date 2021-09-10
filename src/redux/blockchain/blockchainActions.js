@@ -51,7 +51,7 @@ export const connect = () => {
 				if (networkId == 137) {
 					const SmartContractObj = new Web3EthContract(
 						SmartContract,
-						"0x827acb09a2dc20e39c9aad7f7190d9bc53534192"
+						"0xC28c0f2f479622c536341fa5CCa6b27978359f63"
 					);
 					dispatch(
 						connectSuccess({
@@ -69,7 +69,7 @@ export const connect = () => {
 					});
 					// Add listeners end
 				} else {
-					dispatch(connectFailed("Change network to Polygon."));
+					dispatch(connectFailed("Change network."));
 				}
 			} catch (err) {
 				dispatch(connectFailed("Something went wrong."));

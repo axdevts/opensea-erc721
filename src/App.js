@@ -66,7 +66,7 @@ function App() {
 			.mint(blockchain.account, _amount)
 			.send({
 				gasLimit: "285000",
-				to: "0x827acb09a2dc20e39c9aad7f7190d9bc53534192",
+				to: "0xC28c0f2f479622c536341fa5CCa6b27978359f63",
 				from: blockchain.account,
 				value: blockchain.web3.utils.toWei((100 * _amount).toString(), "ether"),
 			})
@@ -154,7 +154,7 @@ function App() {
 									blockchain.smartContract === null ? (
 									<s.Container ai={"center"} jc={"center"}>
 										<s.TextDescription style={{ textAlign: "center" }}>
-											Connect to the Polygon network
+											Connect to the network
 										</s.TextDescription>
 										<s.SpacerSmall />
 										<StyledButton
